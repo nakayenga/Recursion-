@@ -1,15 +1,15 @@
 #include <stdio.h>
 int factorial (int n);
-int summ (int n);
+int sum (int n);
 int main(){
   int n;
   /*Enter the number*/
   printf("Enter the number:\n");
   scanf("%d", &n);
   /*This is the number you have entered*/
-  printf("This is the number you have entered: %d\n", n);
-  printf("This is the factorial of the number you entered: %d\n", factorial(n));
-  printf("This is the sum of the numbers you entered: %d\n", summ(n));
+  printf("number to find factorial: %d\n", n);
+  printf("factorial of number you entered is: %d\n", factorial(n));
+  printf("sum of the numbers you entered is: %d\n", sum(n));
   
 }
 int factorial (int n){
@@ -19,9 +19,9 @@ int factorial (int n){
       return n*factorial(n-1);
     }
   
-  int summ (int n){
+  int sum (int n){
     if (n==1)
       return 1;
     else
-      return n+summ(n-1);
+      return n+sum(n-1);
   }
